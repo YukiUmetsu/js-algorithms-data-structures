@@ -14,6 +14,13 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+    const fullWidth = 2 * n -1;
+    for(let i = 1; i <= n; i++) {
+        const width = 2 * i - 1;
+        const numOfPadding = (fullWidth - width)/2;
+        console.log(' '.repeat(numOfPadding) + '#'.repeat(width) + ' '.repeat(numOfPadding));
+    }
+}
 
 module.exports = pyramid;
